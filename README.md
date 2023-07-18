@@ -1,6 +1,6 @@
-# acecomponents
+# Ace components
 
-A new Flutter project.
+Some Components I created along my learning journey
 
 ## Getting Started
 
