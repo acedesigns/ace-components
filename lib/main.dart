@@ -8,10 +8,16 @@
  */
 
 
+import 'package:flutter/services.dart';
 import 'package:flutter/material.dart';
 import 'package:acecomponents/screens/screens.dart';
 
-void main() {
+void main() async {
+  SystemChrome.setPreferredOrientations([
+    DeviceOrientation.portraitUp,
+    DeviceOrientation.portraitDown
+  ]);
+
   runApp(const MyApp());
 }
 

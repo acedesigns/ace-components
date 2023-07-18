@@ -8,6 +8,8 @@
  */
 
 import 'package:flutter/material.dart';
+import 'package:acecomponents/common/common.dart';
+import 'package:acecomponents/constants/constants.dart';
 import 'package:acecomponents/components/components.dart';
 
 class MainScreen extends StatefulWidget {
@@ -30,7 +32,7 @@ class _MainScreenState extends State<MainScreen> {
         centerTitle: true,
         title: const Text('A collection of Components'),
       ),
-      body:  Column(
+      body: Column(
         //mainAxisAlignment: MainAxisAlignment.start,
         //crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
@@ -38,7 +40,7 @@ class _MainScreenState extends State<MainScreen> {
           const Text('Form Input', style: TextStyle(fontSize: 24),),
           const SizedBox(height: 15),
 
-          InputText(
+          AceInputText(
             obscureText: false,
             controller: emailController,
             hintText: 'Whai is your name',
@@ -49,13 +51,15 @@ class _MainScreenState extends State<MainScreen> {
               return null;
             },
           ),
-
           const SizedBox(height: 15),
 
           AceElevatedButton(
             text: "Click Me",
             onPressed:() {},
-          )
+          ),
+          const SizedBox(height: 15),
+
+          const LoadingSpinner(spinColor: AppColors.charcoal),
         ],
       ),
     );
