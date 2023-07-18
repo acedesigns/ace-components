@@ -10,7 +10,7 @@
 
 import 'package:flutter/material.dart';
 
-class InputText extends StatelessWidget {
+class AceInputText extends StatelessWidget {
 
   final dynamic controller;
   final String hintText;
@@ -19,7 +19,7 @@ class InputText extends StatelessWidget {
   final String? Function(String?)? validator;
   
 
-  const InputText({
+  const AceInputText({
     super.key,
     required this.hintText,
     required this.controller,
