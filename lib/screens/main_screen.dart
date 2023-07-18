@@ -43,9 +43,19 @@ class _MainScreenState extends State<MainScreen> {
             controller: emailController,
             hintText: 'Whai is your name',
             validator: (value) {
-              
+              if (value!.isEmpty) {
+                return 'Please enter something';
+              }
+              return null;
             },
           ),
+
+          const SizedBox(height: 15),
+
+          AceElevatedButton(
+            text: "Click Me",
+            onPressed:() {},
+          )
         ],
       ),
     );
