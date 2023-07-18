@@ -8,7 +8,7 @@
  */
 
 import 'package:flutter/material.dart';
-import 'package:acecomponents/componest/components.dart';
+import 'package:acecomponents/components/components.dart';
 
 class MainScreen extends StatefulWidget {
   const MainScreen({super.key});
@@ -37,7 +37,7 @@ class _MainScreenState extends State<MainScreen> {
           const SizedBox(height: 15),
           const Text('Form Input', style: TextStyle(fontSize: 24),),
           const SizedBox(height: 15),
-          
+
           InputText(
             obscureText: false,
             controller: emailController,
