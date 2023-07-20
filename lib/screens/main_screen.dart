@@ -30,6 +30,7 @@ class _MainScreenState extends State<MainScreen> {
       appBar: AppBar(
         elevation: 0,
         centerTitle: true,
+        backgroundColor: AppColors.charcoal,
         title: const Text('A collection of Components'),
       ),
       body: Column(
@@ -60,6 +61,20 @@ class _MainScreenState extends State<MainScreen> {
           const SizedBox(height: 15),
 
           const LoadingSpinner(spinColor: AppColors.charcoal),
+
+          Container(
+                margin: const EdgeInsets.symmetric(horizontal: 10),
+                child: SizedBox(
+                  height: 105,
+                  child: ListView.builder(
+                    itemCount: 7,
+                    scrollDirection: Axis.horizontal,
+                    itemBuilder: (context, index) {
+                      return const CircularHorizontalList();
+                    },
+                  ),
+                ),
+              ),
         ],
       ),
     );

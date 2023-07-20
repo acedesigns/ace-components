@@ -40,7 +40,9 @@ class AceInputText extends StatelessWidget {
           FocusManager.instance.primaryFocus?.unfocus();
         },
         decoration: InputDecoration(
-          contentPadding: const EdgeInsets.symmetric(vertical: 10, horizontal: 10),
+          filled: true,
+          hintText: hintText,
+          icon: const Icon(Icons.person),
           enabledBorder: const OutlineInputBorder(
             borderSide: BorderSide(color: Colors.black54),
           ),
@@ -48,9 +50,8 @@ class AceInputText extends StatelessWidget {
             borderSide: BorderSide(color: Colors.grey.shade400),
           ),
           fillColor: const Color.fromARGB(255, 60, 87, 96),
-          filled: true,
-          hintText: hintText,
-          hintStyle: const TextStyle(color: Colors.white, fontSize: 13)
+          hintStyle: const TextStyle(color: Colors.white, fontSize: 13),
+          contentPadding: const EdgeInsets.symmetric(vertical: 10, horizontal: 10),
         ),
         validator: validator,
       ),
