@@ -16,7 +16,7 @@ class CircularHorizontalList extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
-      children: [
+      children: <Widget>[
         Container(
           height: 80,
           width: 80,
@@ -25,7 +25,7 @@ class CircularHorizontalList extends StatelessWidget {
             color: Colors.black,
             borderRadius: BorderRadius.circular(50),
             image: const DecorationImage(
-              image: NetworkImage('https://loremflickr.com/cache/resized/7175_6416825983_e5f6b93018_b_512_512_nofilter.jpg'),
+              image: NetworkImage('https://loremflickr.com/cache/resized/65535_53065639115_14eaf016a0_320_240_nofilter.jpg'),
               fit: BoxFit.cover
             ),
           ),

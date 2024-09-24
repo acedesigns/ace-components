@@ -21,7 +21,7 @@ class MainScreen extends StatefulWidget {
 
 class _MainScreenState extends State<MainScreen> {
 
-  final emailController = TextEditingController();
+  final TextEditingController emailController = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -31,7 +31,7 @@ class _MainScreenState extends State<MainScreen> {
         elevation: 0,
         centerTitle: true,
         backgroundColor: AppColors.charcoal,
-        title: const Text('A collection of Components'),
+        title: const Text('A collection of Components', style: TextStyle(color: Colors.white)),
       ),
       body: Column(
         //mainAxisAlignment: MainAxisAlignment.start,
@@ -44,8 +44,8 @@ class _MainScreenState extends State<MainScreen> {
           AceInputText(
             obscureText: false,
             controller: emailController,
-            hintText: 'Whai is your name',
-            validator: (value) {
+            hintText: 'What is your name',
+            validator: (String? value) {
               if (value!.isEmpty) {
                 return 'Please enter something';
               }
@@ -55,7 +55,7 @@ class _MainScreenState extends State<MainScreen> {
           const SizedBox(height: 15),
 
           AceElevatedButton(
-            text: "Click Me",
+            text: 'Click Me',
             onPressed:() {},
           ),
           const SizedBox(height: 15),
@@ -69,7 +69,7 @@ class _MainScreenState extends State<MainScreen> {
                   child: ListView.builder(
                     itemCount: 7,
                     scrollDirection: Axis.horizontal,
-                    itemBuilder: (context, index) {
+                    itemBuilder: (BuildContext context, int index) {
                       return const CircularHorizontalList();
                     },
                   ),

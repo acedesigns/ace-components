@@ -21,20 +21,20 @@ class CallApi {
   // ignore: prefer_typing_uninitialized_variables
   var http;
 
-  _setHeaders() => {
+  _setHeaders() => <String, String>{
     'Accept': 'application/json',
     'Content-type': 'application/json',
     // If Server is Laravel
     'X-Requested-With': 'XMLHttpRequest',
   };
 
-  postData(data, apiUrl) async {
-    var fullUrl = _url + apiUrl;
+  postData(dynamic data, String apiUrl) async {
+    String fullUrl = _url + apiUrl;
     return await http.post(Uri.parse(fullUrl),body: jsonEncode(data), headers: _setHeaders());
   }
 
-  getData(apiUrl) async {
-    var fullUrl = _url + apiUrl;
+  getData(String apiUrl) async {
+    String fullUrl = _url + apiUrl;
     return await http.get(Uri.parse(fullUrl), headers: _setHeaders());
   }
 
