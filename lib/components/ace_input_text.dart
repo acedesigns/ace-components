@@ -7,7 +7,6 @@
  * =======================================================
  */
 
-
 import 'package:flutter/material.dart';
 
 class AceInputText extends StatelessWidget {
@@ -36,7 +35,7 @@ class AceInputText extends StatelessWidget {
         controller: controller,
         obscureText: obscureText,
         style: const TextStyle(fontSize: 13, color: Colors.white),
-        onTapOutside: (event) {
+        onTapOutside: (PointerDownEvent event) {
           FocusManager.instance.primaryFocus?.unfocus();
         },
         decoration: InputDecoration(
