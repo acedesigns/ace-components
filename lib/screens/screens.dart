@@ -7,4 +7,8 @@
  * =======================================================
  */
 
+export './app/app.dart';
+export './auth/auth.dart';
 export './main_screen.dart';
+export './welcome_screen.dart';
+export 'app_error_screen.dart';

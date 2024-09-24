@@ -9,6 +9,8 @@
 
 import 'package:flutter/services.dart';
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
+import 'package:acecomponents/routing/routing.dart';
 import 'package:acecomponents/screens/screens.dart';
 
 void main() async {
@@ -26,13 +28,16 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+
+    final GoRouter appRouter = appRoutes();
+
+    return MaterialApp.router(
       title: 'Flutter Demo',
+      routerConfig: appRouter,
       theme: ThemeData(
         fontFamily: 'Ubuntu',
         useMaterial3: true
       ),
-      home: const MainScreen(),
     );
   }
 }
